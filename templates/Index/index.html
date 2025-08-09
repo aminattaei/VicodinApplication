@@ -1,0 +1,2203 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} صفحه اصلی {% endblock title %}
+
+{% block content %}
+
+        <!-- Utilize Cart Menu Start -->
+        <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+            <div class="ltn__utilize-menu-inner ltn__scrollbar">
+                <div class="ltn__utilize-menu-head">
+                    <span class="ltn__utilize-menu-title">سبد خرید</span>
+                    <button class="ltn__utilize-close">×</button>
+                </div>
+                <div class="mini-cart-product-area ltn__scrollbar">
+                    <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-img">
+                            <a href="#"><img src="{% static 'img/product/1.png' %}" alt="Image"></a>
+                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                        </div>
+                        <div class="mini-cart-info">
+                            <h6><a href="#">اسپری ضد عفونی کننده</a></h6>
+                            <span class="mini-cart-quantity">1 - 32،000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-img">
+                            <a href="#"><img src="{% static 'img/product/2.png' %}" alt="Image"></a>
+                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                        </div>
+                        <div class="mini-cart-info">
+                            <h6><a href="#">گوشی پزشکی</a></h6>
+                            <span class="mini-cart-quantity">1 - 85،000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-img">
+                            <a href="#"><img src="{% static 'img/product/3.png' %}" alt="Image"></a>
+                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                        </div>
+                        <div class="mini-cart-info">
+                            <h6><a href="#">ماسک سه لایه</a></h6>
+                            <span class="mini-cart-quantity">1 - 11،000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-img">
+                            <a href="#"><img src="{% static 'img/product/4.png' %}" alt="Image"></a>
+                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                        </div>
+                        <div class="mini-cart-info">
+                            <h6><a href="#">گان محافظت عفونی</a></h6>
+                            <span class="mini-cart-quantity">1 - 520،000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-cart-footer">
+                    <div class="mini-cart-sub-total">
+                        <h5>جمع کل:<span>848،000 تومان</span></h5>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a href="{% static 'cart.html' %}" class="theme-btn-1 btn btn-effect-1">مشاهده سبد خرید</a>
+                        <a href="{% static 'cart.html' %}" class="theme-btn-2 btn btn-effect-2">پرداخت</a>
+                    </div>
+                    <p>امروزت رو با 23% تخفیف شروع کن!!</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- Utilize Cart Menu End -->
+
+
+        <!-- Utilize Mobile Menu Start -->
+        <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+            <div class="ltn__utilize-menu-inner ltn__scrollbar">
+                <div class="ltn__utilize-menu-head">
+                    <div class="site-logo">
+                        <a href="{% static 'index.html' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+                    </div>
+                    <button class="ltn__utilize-close">×</button>
+                </div>
+                <div class="ltn__utilize-menu-search-form">
+                    <form action="#">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="ltn__utilize-menu">
+                    <ul>
+                        <li><a href="#">خانه</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% static 'index.html' %}">خانه 1</a></li>
+                                <li><a href="{% static 'index-2.html' %}">خانه 2</a></li>
+                                <li><a href="{% static 'index-3.html' %}">خانه 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">درباره ما</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% static 'about.html' %}">درباره ما</a></li>
+                                <li><a href="{% static 'service.html' %}">سرویس ها</a></li>
+                                <li><a href="{% static 'service-details.html' %}">جزئیات سرویس ها</a></li>
+                                <li><a href="{% static 'portfolio.html' %}">گالری نمونه کار</a></li>
+                                <li><a href="{% static 'portfolio-2.html' %}">گالری نمونه کار -2</a></li>
+                                <li><a href="{% static 'portfolio-details.html' %}">جزئیات نمونه کار</a></li>
+                                <li><a href="{% static 'team.html' %}">تیم</a></li>
+                                <li><a href="{% static 'team-details.html' %}">جزئیات تیم</a></li>
+                                <li><a href="{% static 'faq.html' %}">پرسش های متداول</a></li>
+                                <li><a href="{% static 'locations.html' %}">نمایندگی ها</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">فروشگاه</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% static 'shop.html' %}">فروشگاه</a></li>
+                                <li><a href="{% static 'shop-grid.html' %}">فروشگاه شبکه ای</a></li>
+                                <li><a href="{% static 'shop-left-sidebar.html' %}">فروشگاه با سایدبار چپ</a></li>
+                                <li><a href="{% static 'shop-right-sidebar.html' %}">فروشگاه با سایدبار راست</a></li>
+                                <li><a href="{% static 'product-details.html' %}">جزئیات محصول</a></li>
+                                <li><a href="#">صفحات کاربری<span class="float-right">>></span></a>
+                                    <ul>
+                                        <li><a href="{% static 'cart.html' %}">سبد خرید</a></li>
+                                        <li><a href="{% static 'wishlist.html' %}">علاقه مندی ها</a></li>
+                                        <li><a href="{% static 'checkout.html' %}">خرید</a></li>
+                                        <li><a href="{% static 'order-tracking.html' %}">رهگیری سفارش</a></li>
+                                        <li><a href="{% static 'account.html' %}">حساب کاربری</a></li>
+                                        <li><a href="{% static 'login.html' %}">ورود</a></li>
+                                        <li><a href="{% static 'register.html' %}">ثبت نام</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">وبلاگ</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% static 'blog.html' %}">وبلاگ</a></li>
+                                <li><a href="{% static 'blog-grid.html' %}">وبلاگ شبکه ای</a></li>
+                                <li><a href="{% static 'blog-left-sidebar.html' %}">وبلاگ با سایدبار چپ</a></li>
+                                <li><a href="{% static 'blog-right-sidebar.html' %}">وبلاگ با سایدبار راست</a></li>
+                                <li><a href="{% static 'blog-details.html' %}">جزئیات مطلب وبلاگ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">صفحات</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% static 'about.html' %}">درباره ما</a></li>
+                                <li><a href="{% static 'service.html' %}">سرویس ها</a></li>
+                                <li><a href="{% static 'service-details.html' %}">جزئیات سرویس</a></li>
+                                <li><a href="{% static 'portfolio.html' %}">نمونه کار</a></li>
+                                <li><a href="{% static 'portfolio-2.html' %}">نمونه کار -2</a></li>
+                                <li><a href="{% static 'portfolio-details.html' %}">جزئیات نمونه کار</a></li>
+                                <li><a href="{% static 'team.html' %}">تیم</a></li>
+                                <li><a href="{% static 'team-details.html' %}">جزئیات تیم</a></li>
+                                <li><a href="{% static 'faq.html' %}">پرسش های متداول</a></li>
+                                <li><a href="{% static 'history.html' %}">سوابق</a></li>
+                                <li><a href="{% static 'account.html' %}">حساب کاربری</a></li>
+                                <li><a href="{% static 'locations.html' %}">نمایندگی ها</a></li>
+                                <li><a href="{% static '404.html' %}">404</a></li>
+                                <li><a href="{% static 'contact.html' %}">ارتباط با ما</a></li>
+                                <li><a href="{% static 'coming-soon.html' %}">به زودی</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% static 'contact.html' %}">ارتباط با ما</a></li>
+                    </ul>
+                </div>
+                <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
+                    <ul>
+                        <li>
+                            <a href="{% static 'account.html' %}" title="My Account">
+                                <span class="utilize-btn-icon">
+                                    <i class="far fa-user"></i>
+                                </span>
+                                حساب کاربری من
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% static 'wishlist.html' %}" title="Wishlist">
+                                <span class="utilize-btn-icon">
+                                    <i class="far fa-heart"></i>
+                                    <sup>3</sup>
+                                </span>
+                                علاقه مندی ها
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% static 'cart.html' %}" title="Shoping Cart">
+                                <span class="utilize-btn-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <sup>5</sup>
+                                </span>
+                                سبد خرید
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ltn__social-media-2">
+                    <ul>
+                        <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Utilize Mobile Menu End -->
+
+        <div class="ltn__utilize-overlay"></div>
+
+        <!-- SLIDER AREA START (slider-3) -->
+        <div class="ltn__slider-area ltn__slider-3---  section-bg-1--- mt-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="ltn__slide-active-2 slick-slide-arrow-1 slick-slide-dots-1 mb-30">
+                            <!-- ltn__slide-item -->
+                            <div class="ltn__slide-item ltn__slide-item-10 section-bg-1 bg-image"
+                                data-bs-bg="static/img/slider/71.jpg">
+                                <div class="ltn__slide-item-inner">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-7 col-md-7 col-sm-7 align-self-center">
+                                                <div class="slide-item-info">
+                                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                                        <h6 class="slide-sub-title ltn__secondary-color animated">تا 50%
+                                                            تخفیف فقط تا امروز</h6>
+                                                        <h1 class="slide-title  animated">استاندارد طلایی قبل از تمرین
+                                                        </h1>
+                                                        <div class="slide-brief animated d-none">
+                                                            <p>
+                                                                لورم ایپسوم متن ساختگی نامعتبر در راستای بهبود ظاهری
+                                                                متون قدم بر میدارد.
+                                                            </p>
+                                                        </div>
+                                                        <h5 class="color-orange  animated">شروع از 200 هزارتومان</h5>
+                                                        <div class="btn-wrapper  animated">
+                                                            <a href="{% static 'shop.html' %}" class="theme-btn-1 btn btn-effect-1">بزن
+                                                                بریم!</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 align-self-center">
+                                                <div class="slide-item-img">
+                                                    <!-- <a href="{% static 'shop.html' %}"><img src="{% static 'img/product/1.png' %}" alt="Image"></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ltn__slide-item -->
+                            <div class="ltn__slide-item ltn__slide-item-10 section-bg-1 bg-image"
+                                data-bs-bg="static/img/slider/62.jpg">
+                                <div class="ltn__slide-item-inner">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-7 col-md-7 col-sm-7 align-self-center">
+                                                <div class="slide-item-info">
+                                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                                        <h4
+                                                            class="slide-sub-title ltn__secondary-color animated text-uppercase">
+                                                            تا 50% تخفیف فقط تا امروز</h4>
+                                                        <h1 class="slide-title  animated">استاندارد نقره ای قبل از تمرین
+                                                        </h1>
+                                                        <div class="slide-brief animated d-none">
+                                                            <p>
+                                                                لورم ایپسوم متن ساختگی نامعتبر در راستای بهبود ظاهری
+                                                                متون قدم بر میدارد.
+                                                            </p>
+                                                        </div>
+                                                        <div class="btn-wrapper  animated">
+                                                            <a href="{% static 'shop.html' %}"
+                                                                class="theme-btn-1 btn btn-effect-1 text-uppercase">بزن
+                                                                بریم</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 align-self-center">
+                                                <div class="slide-item-img">
+                                                    <!-- <a href="{% static 'shop.html' %}"><img src="static/img/slider/62.jpg" alt="Image"></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="ltn__banner-item">
+                            <div class="ltn__banner-img">
+                                <a href="{% static 'shop.html' %}"><img src="{% static 'img/banner/17.jpg' %}" alt="Banner Image"></a>
+                            </div>
+                        </div>
+                        <div class="ltn__banner-item">
+                            <div class="ltn__banner-img">
+                                <a href="{% static 'shop.html' %}"><img src="{% static 'img/banner/18.jpg' %}" alt="Banner Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SLIDER AREA END -->
+
+        <!-- CATEGORY AREA START -->
+        <div class="ltn__category-area section-bg-1-- pt-50 pb-50">
+            <div class="container">
+                <div class="row ltn__category-slider-active-six slick-arrow-1 border-bottom">
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-notes-medical"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">بهترین معاملات</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-box-tissue"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">پد میکروب</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-pump-medical"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">تجهیزات جانبی</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-bong"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">سرپوش پزشکی</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-tooth"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">تجهیزات دندانپزشکی</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-microscope"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">تجهیزات آزمایشگاهی</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-syringe"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">همه لوازم</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-stethoscope"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">عمومی</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-hand-holding-medical"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">اورژانس</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ltn__category-item ltn__category-item-6 text-center">
+                            <div class="ltn__category-item-img">
+                                <a href="{% static 'shop.html' %}">
+                                    <i class="fas fa-procedures"></i>
+                                </a>
+                            </div>
+                            <div class="ltn__category-item-name">
+                                <h6><a href="{% static 'shop.html' %}">تجهیزات اتاق درمان</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CATEGORY AREA END -->
+
+        <!-- PRODUCT AREA START (product-item-3) -->
+        <div class="ltn__product-area ltn__product-gutter  no-product-ratting pt-85 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title-area ltn__section-title-2 text-center">
+                            <h1 class="section-title">محصولات ویژه</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-6">
+                                <div class="ltn__banner-item">
+                                    <div class="ltn__banner-img">
+                                        <a href="{% static 'shop.html' %}"><img src="{% static 'img/banner/11.jpg' %}" alt="Banner Image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-6">
+                                <div class="ltn__banner-item">
+                                    <div class="ltn__banner-img">
+                                        <a href="{% static 'shop.html' %}"><img src="{% static 'img/banner/12.jpg' %}" alt="Banner Image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+                            <!-- ltn__product-item -->
+                            <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                                <div class="ltn__product-item ltn__product-item-2 text-left">
+                                    <div class="product-img">
+                                        <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badge">جدید</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                        data-bs-target="#quick_view_modal">
+                                                        <i class="far fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                        data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                        data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="{% static 'product-details.html' %}">اسپری ضد عفونی
+                                                کننده</a></h2>
+                                        <div class="product-price">
+                                            <span>32،000 تومان</span>
+                                            <del>46،000 تومان</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ltn__product-item -->
+                            <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                                <div class="ltn__product-item ltn__product-item-2 text-left">
+                                    <div class="product-img">
+                                        <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                        data-bs-target="#quick_view_modal">
+                                                        <i class="far fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                        data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                        data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="{% static 'product-details.html' %}">گوشی پزشکی دیجیتال</a>
+                                        </h2>
+                                        <div class="product-price">
+                                            <span>25،000 تومان</span>
+                                            <del>35،000 تومان</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ltn__product-item -->
+                            <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                                <div class="ltn__product-item ltn__product-item-2 text-left">
+                                    <div class="product-img">
+                                        <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/3.png' %}" alt="#"></a>
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badge">جدید</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                        data-bs-target="#quick_view_modal">
+                                                        <i class="far fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                        data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                        data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="{% static 'product-details.html' %}">کیف لوازم آرایش</a>
+                                        </h2>
+                                        <div class="product-price">
+                                            <span>75،000 تومان</span>
+                                            <del>92،000 تومان</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ltn__product-item -->
+                            <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                                <div class="ltn__product-item ltn__product-item-2 text-left">
+                                    <div class="product-img">
+                                        <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/4.png' %}" alt="#"></a>
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badge">جدید</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                        data-bs-target="#quick_view_modal">
+                                                        <i class="far fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                        data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                        data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="{% static 'product-details.html' %}">بسته ماسک N95</a></h2>
+                                        <div class="product-price">
+                                            <span>100،000تومان</span>
+                                            <del>110،000 تومان</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ltn__product-item -->
+                            <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                                <div class="ltn__product-item ltn__product-item-2 text-left">
+                                    <div class="product-img">
+                                        <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/5.png' %}" alt="#"></a>
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badge">جدید</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                        data-bs-target="#quick_view_modal">
+                                                        <i class="far fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                        data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                        data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستکش یک بار مصرف</a>
+                                        </h2>
+                                        <div class="product-price">
+                                            <span>10،000 تومان</span>
+                                            <del>14،000 تومان</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ltn__product-item -->
+                            <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
+                                <div class="ltn__product-item ltn__product-item-2 text-left">
+                                    <div class="product-img">
+                                        <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/6.png' %}" alt="#"></a>
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badge">جدید</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                        data-bs-target="#quick_view_modal">
+                                                        <i class="far fa-eye"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                        data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                        data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه لیزر جراحی</a>
+                                        </h2>
+                                        <div class="product-price">
+                                            <span>150 میلیون تومان</span>
+                                            <del>153میلیون تومان</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PRODUCT AREA END -->
+
+        <!-- COUNTDOWN AREA START -->
+        <div class="ltn__call-to-action-area section-bg-1 bg-image pt-120 pb-120" data-bs-bg="static/img/bg/25.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="call-to-action-inner text-color-white--- text-center---">
+                            <div class="section-title-area ltn__section-title-2--- text-center---">
+                                <h6 class="ltn__secondary-color">تخفیف داغ امروز</h6>
+                                <h1 class="section-title">واکسن کووید 19</h1>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                            </div>
+                            <div class="ltn__countdown ltn__countdown-3 bg-white--" data-countdown="2024/12/28"></div>
+                            <div class="btn-wrapper animated">
+                                <a href="{% static 'contact.html' %}" class="theme-btn-1 btn btn-effect-1 text-uppercase">خرید هم
+                                    اکنون</a>
+                                <a href="{% static 'shop.html' %}" class="ltn__secondary-color text-decoration-underline">معاملات
+                                    امروز</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <!-- <img src="{% static 'img/banner/15.png' %}" alt="#"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- COUNTDOWN AREA END -->
+
+        <!-- PRODUCT AREA START (product-item-3) -->
+        <div class="ltn__product-area ltn__product-gutter  no-product-ratting pt-115 pb-70---">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title-area ltn__section-title-2 text-center">
+                            <h1 class="section-title">آخرین محصولات</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ltn__tab-product-slider-one-active slick-arrow-1">
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">اسپری ضد عفونی کننده</a></h2>
+                                <div class="product-price">
+                                    <span>32،000تومان</span>
+                                    <del>46،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">گوشی پزشکی</a></h2>
+                                <div class="product-price">
+                                    <span>1،000،000تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/3.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه تحویه هوا</a></h2>
+                                <div class="product-price">
+                                    <span>1،100،000تومان</span>
+                                    <del>1،230،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/4.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه فشار سنج</a></h2>
+                                <div class="product-price">
+                                    <span>2،000،000تومان</span>
+                                    <del>2،740،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">اسپری ضد عفونی کننده</a></h2>
+                                <div class="product-price">
+                                    <span>32،000تومان</span>
+                                    <del>46،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">گوشی پزشکی</a></h2>
+                                <div class="product-price">
+                                    <span>1،000،000تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/3.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه تحویه هوا</a></h2>
+                                <div class="product-price">
+                                    <span>1،100،000تومان</span>
+                                    <del>1،230،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/4.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه فشار سنج</a></h2>
+                                <div class="product-price">
+                                    <span>2،000،000تومان</span>
+                                    <del>2،740،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+        <!-- PRODUCT AREA END -->
+
+        <!-- BANNER AREA START -->
+        <div class="ltn__banner-area mt-120---">
+            <div class="container">
+                <div class="row ltn__custom-gutter--- justify-content-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__banner-item">
+                            <div class="ltn__banner-img">
+                                <a href="{% static 'shop.html' %}"><img src="{% static 'img/banner/22.jpg' %}" alt="Banner Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__banner-item">
+                            <div class="ltn__banner-img">
+                                <a href="{% static 'shop.html' %}"><img src="{% static 'img/banner/21.jpg' %}" alt="Banner Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ltn__banner-item">
+                            <div class="ltn__banner-img">
+                                <a href="{% static 'shop.html' %}"><img src="{% static 'img/banner/23.jpg' %}" alt="Banner Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BANNER AREA END -->
+
+        <!-- SMALL PRODUCT LIST AREA START -->
+        <div class="ltn__small-product-list-area section-bg-1 pt-115 pb-90 mt-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title-area ltn__section-title-2 text-center">
+                            <h1 class="section-title">محصولات ویژه</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/1.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">ژل ضد عفونی کننده</a></h2>
+                                <div class="product-price">
+                                    <span>129،000تومان</span>
+                                    <del>140،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/2.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">گوشی پزشکی</a></h2>
+                                <div class="product-price">
+                                    <span>145،000تومان</span>
+                                    <del>155،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/3.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه تسویه هوا</a></h2>
+                                <div class="product-price">
+
+                                    <span>735،000تومان</span>
+                                    <del>820،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/4.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه فشار سنج</a></h2>
+                                <div class="product-price">
+
+                                    <span>920،000تومان</span>
+                                    <del>1،000،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/5.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستکش یکبار مصرف</a></h2>
+                                <div class="product-price">
+
+                                    <span>140،000تومان</span>
+                                    <del>150،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/6.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">تب سنج دیجیتال<a></h2>
+                                <div class="product-price">
+
+                                    <span>350،000تومان</span>
+                                    <del>420،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/7.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">ماسک چهار لایه</a></h2>
+                                <div class="product-price">
+
+                                    <span>130،000تومان</span>
+                                    <del>150،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/8.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">اسپری ضد عفونی کننده</a></h2>
+                                <div class="product-price">
+
+                                    <span>180،000تومان</span>
+                                    <del>190،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- small-product-item -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="ltn__small-product-item">
+                            <div class="small-product-item-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product/9.png' %}" alt="Image"></a>
+                            </div>
+                            <div class="small-product-item-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه LP11</a></h2>
+                                <div class="product-price">
+
+                                    <span>340،000تومان</span>
+                                    <del>400،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+        <!-- SMALL PRODUCT LIST AREA END -->
+
+        <!-- PRODUCT AREA START (product-item-3) -->
+        <div class="ltn__product-area ltn__product-gutter pt-115 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title-area ltn__section-title-2 text-center">
+                            <h1 class="section-title">پر فروش ترین محصولات</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/1.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">اسپری ضد عفونی کننده</a></h2>
+                                <div class="product-price">
+                                    <span>32،000تومان</span>
+                                    <del>46،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/2.png' %}" alt="#"></a>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">گوشی پزشکی</a></h2>
+                                <div class="product-price">
+                                    <span>195،000تومان</span>
+                                    <del>205،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/3.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه فشار سنج</a></h2>
+                                <div class="product-price">
+                                    <span>2،000،000تومان</span>
+                                    <del>2،300،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/4.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">ماسک سه لایه</a></h2>
+                                <div class="product-price">
+                                    <span>78،000تومان</span>
+                                    <del>83،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/5.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستکش یکبار مصرف</a></h2>
+                                <div class="product-price">
+                                    <span>150،000تومان</span>
+                                    <del>163،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/8.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">گان محافظت عفونی</a></h2>
+                                <div class="product-price">
+                                    <span>350،000تومان</span>
+                                    <del>370،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/7.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">دستگاه دیابت سنج</a></h2>
+                                <div class="product-price">
+                                    <span>4،320،000تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ltn__product-item -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="ltn__product-item ltn__product-item-3 text-left">
+                            <div class="product-img">
+                                <a href="{% static 'product-details.html' %}"><img src="{% static 'img/product-2/8.png' %}" alt="#"></a>
+                                <div class="product-badge">
+                                    <ul>
+                                        <li class="sale-badge">جدید</li>
+                                    </ul>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#quick_view_modal">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                data-bs-target="#add_to_cart_modal">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                                data-bs-target="#liton_wishlist_modal">
+                                                <i class="far fa-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="product-title"><a href="{% static 'product-details.html' %}">میکروسکوپ k50</a></h2>
+                                <div class="product-price">
+                                    <span>780،000تومان</span>
+                                    <del>820،000تومان</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+        <!-- PRODUCT AREA END -->
+
+        <!-- ABOUT US AREA START -->
+        <div class="ltn__about-us-area bg-image pt-115 pb-110" data-bs-bg="static/img/bg/26.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="about-us-img-wrap about-img-left">
+                            <!-- <img src="{% static 'img/others/7.png' %}" alt="About Us Image"> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                        <div class="about-us-info-wrap">
+                            <div class="section-title-area ltn__section-title-2--- mb-20">
+                                <h6 class="section-subtitle section-subtitle-2--- ltn__secondary-color">ماسک پوششی صورت
+                                    N95</h6>
+                                <h1 class="section-title">
+                                    ماسک های ایمنی درجه A
+                                    برای فروش. تعداد بالا!
+                                </h1>
+                                <p>بیش از 39000 نفر در بیش از 70 کشور در سراسر جهان برای ما کار می کنند
+                                    این وسعت پوشش جهانی، همراه با خدمات تخصصی</p>
+                            </div>
+                            <ul class="ltn__list-item-half clearfix">
+                                <li>
+                                    <i class="flaticon-home-2"></i>
+                                    کربن فعال
+                                </li>
+                                <li>
+                                    <i class="flaticon-mountain"></i>
+                                    دریچه تنفس
+                                </li>
+                                <li>
+                                    <i class="flaticon-heart"></i>
+                                    فیلتر 6 لایه
+                                </li>
+                                <li>
+                                    <i class="flaticon-secure"></i>
+                                    شستشو و قابل استفاده مجدد
+                                </li>
+                            </ul>
+                            <div class="btn-wrapper animated">
+                                <a href="{% static 'service.html' %}"
+                                    class="ltn__secondary-color text-uppercase text-decoration-underline">مشاهده
+                                    محصولات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ABOUT US AREA END -->
+
+        <!-- BLOG AREA START (blog-3) -->
+        <div class="ltn__blog-area pt-120 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title-area ltn__section-title-2--- text-center">
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">خبر ها و وبلاگ</h6>
+                            <h1 class="section-title">آخرین مطالب وبلاگ</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  ltn__blog-slider-one-active slick-arrow-1 ltn__blog-item-3-normal">
+                    <!-- Blog Item -->
+                    <div class="col-lg-12">
+                        <div class="ltn__blog-item ltn__blog-item-3">
+                            <div class="ltn__blog-img">
+                                <a href="{% static 'blog-details.html' %}"><img src="{% static 'img/blog/1.jpg' %}" alt="#"></a>
+                            </div>
+                            <div class="ltn__blog-brief">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-author">
+                                            <a href="#"><i class="far fa-user"></i>توسط: ADMIN</a>
+                                        </li>
+                                        <li class="ltn__blog-tags">
+                                            <a href="#"><i class="fas fa-tags"></i>طراحی وب</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="ltn__blog-title"><a href="{% static 'blog-details.html' %}">10 کاری که قبل از طراحی باید
+                                        کرد</a></h3>
+                                <div class="ltn__blog-meta-btn">
+                                    <div class="ltn__blog-meta">
+                                        <ul>
+                                            <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>22 مهر،1401
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="ltn__blog-btn">
+                                        <a href="{% static 'blog-details.html' %}">اطلاعات بیشتر</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Item -->
+                    <div class="col-lg-12">
+                        <div class="ltn__blog-item ltn__blog-item-3">
+                            <div class="ltn__blog-img">
+                                <a href="{% static 'blog-details.html' %}"><img src="{% static 'img/blog/2.jpg' %}" alt="#"></a>
+                            </div>
+                            <div class="ltn__blog-brief">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-author">
+                                            <a href="#"><i class="far fa-user"></i>توسط : HAMID</a>
+                                        </li>
+                                        <li class="ltn__blog-tags">
+                                            <a href="#"><i class="fas fa-tags"></i>دندانپزشکی</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="ltn__blog-title"><a href="{% static 'blog-details.html' %}">اینکار را اگر بکنید دندان های
+                                        شما دیر تر خراب میشوند</a></h3>
+                                <div class="ltn__blog-meta-btn">
+                                    <div class="ltn__blog-meta">
+                                        <ul>
+                                            <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>21مهر، 1401
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="ltn__blog-btn">
+                                        <a href="{% static 'blog-details.html' %}">اطلاعات بیشتر</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Item -->
+                    <div class="col-lg-12">
+                        <div class="ltn__blog-item ltn__blog-item-3">
+                            <div class="ltn__blog-img">
+                                <a href="{% static 'blog-details.html' %}"><img src="{% static 'img/blog/3.jpg' %}" alt="#"></a>
+                            </div>
+                            <div class="ltn__blog-brief">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-author">
+                                            <a href="#"><i class="far fa-user"></i>توسط: BEHROZ</a>
+                                        </li>
+                                        <li class="ltn__blog-tags">
+                                            <a href="#"><i class="fas fa-tags"></i>پزشکی</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="ltn__blog-title"><a href="{% static 'blog-details.html' %}">اگر شب های نمیخوابید با این
+                                        راهکار بخوابید!</a></h3>
+                                <div class="ltn__blog-meta-btn">
+                                    <div class="ltn__blog-meta">
+                                        <ul>
+                                            <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>18 مهر، 1401
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="ltn__blog-btn">
+                                        <a href="{% static 'blog-details.html' %}">اطلاعات بیشتر</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Item -->
+                    <div class="col-lg-12">
+                        <div class="ltn__blog-item ltn__blog-item-3">
+                            <div class="ltn__blog-img">
+                                <a href="{% static 'blog-details.html' %}"><img src="{% static 'img/blog/4.jpg' %}" alt="#"></a>
+                            </div>
+                            <div class="ltn__blog-brief">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-author">
+                                            <a href="#"><i class="far fa-user"></i>توسط: MOHSEN</a>
+                                        </li>
+                                        <li class="ltn__blog-tags">
+                                            <a href="#"><i class="fas fa-tags"></i>چشمپزشکی</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="ltn__blog-title"><a href="{% static 'blog-details.html' %}">چند راهکار برای رفع خستگی
+                                        چشم</a></h3>
+                                <div class="ltn__blog-meta-btn">
+                                    <div class="ltn__blog-meta">
+                                        <ul>
+                                            <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>11 مهر، 1401
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="ltn__blog-btn">
+                                        <a href="{% static 'blog-details.html' %}">اطلاعات بیشتر</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Item -->
+                    <div class="col-lg-12">
+                        <div class="ltn__blog-item ltn__blog-item-3">
+                            <div class="ltn__blog-img">
+                                <a href="{% static 'blog-details.html' %}"><img src="{% static 'img/blog/1.jpg' %}" alt="#"></a>
+                            </div>
+                            <div class="ltn__blog-brief">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-author">
+                                            <a href="#"><i class="far fa-user"></i>توسط: ADMIN</a>
+                                        </li>
+                                        <li class="ltn__blog-tags">
+                                            <a href="#"><i class="fas fa-tags"></i>طراحی وب</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="ltn__blog-title"><a href="{% static 'blog-details.html' %}">10 کاری که قبل از طراحی باید
+                                        کرد</a></h3>
+                                <div class="ltn__blog-meta-btn">
+                                    <div class="ltn__blog-meta">
+                                        <ul>
+                                            <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>22 مهر،1401
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="ltn__blog-btn">
+                                        <a href="{% static 'blog-details.html' %}">اطلاعات بیشتر</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+        <!-- BLOG AREA END -->
+
+        <!-- FEATURE AREA START ( Feature - 3) -->
+        <div class="ltn__feature-area section-bg-1 mt-90 pt-30 pb-30 mt--65---">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div
+                            class="ltn__feature-item-box-wrap ltn__feature-item-box-wrap-2 ltn__border--- section-bg-1">
+                            <div class="ltn__feature-item ltn__feature-item-8">
+                                <div class="ltn__feature-icon">
+                                    <img src="{% static 'img/icons/svg/8-trolley.svg' %}" alt="#">
+                                </div>
+                                <div class="ltn__feature-info">
+                                    <h4>ارسال رایگان</h4>
+                                    <p>در همه سفارشات بیش از صد هزارتومان</p>
+                                </div>
+                            </div>
+                            <div class="ltn__feature-item ltn__feature-item-8">
+                                <div class="ltn__feature-icon">
+                                    <img src="{% static 'img/icons/svg/9-money.svg' %}" alt="#">
+                                </div>
+                                <div class="ltn__feature-info">
+                                    <h4>15 روز برمی&zwnj;گردد</h4>
+                                    <p>ضمانت بازگشت وجه</p>
+                                </div>
+                            </div>
+                            <div class="ltn__feature-item ltn__feature-item-8">
+                                <div class="ltn__feature-icon">
+                                    <img src="{% static 'img/icons/svg/10-credit-card.svg' %}" alt="#">
+                                </div>
+                                <div class="ltn__feature-info">
+                                    <h4> تسویه حساب ایمن</h4>
+                                    <p>محافظت شده توسط بانک ملی</p>
+                                </div>
+                            </div>
+                            <div class="ltn__feature-item ltn__feature-item-8">
+                                <div class="ltn__feature-icon">
+                                    <img src="{% static 'img/icons/svg/11-gift-card.svg' %}" alt="#">
+                                </div>
+                                <div class="ltn__feature-info">
+                                    <h4>پیشنهاد و هدیه اینجا</h4>
+                                    <p>در تمام سفارشات بیش از صد هزارتومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FEATURE AREA END -->
+
+        <!-- CALL TO ACTION START (call-to-action-6) -->
+        <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom d-none" data-bs-bg="img/1.jpg--">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div
+                            class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                            <div class="coll-to-info text-color-white">
+                                <h1>خرید لوازم ضد عفونی <br>برای محافظت از عزیزانتان</h1>
+                            </div>
+                            <div class="btn-wrapper">
+                                <a class="btn btn-effect-3 btn-white" href="{% static 'shop.html' %}">بزن بریم!<i
+                                        class="icon-left-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CALL TO ACTION END -->
+
+       
+{% endblock content %}
