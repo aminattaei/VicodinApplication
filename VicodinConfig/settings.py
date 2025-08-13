@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'shop',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -116,3 +117,5 @@ MEDIA_URL = os.path.join(BASE_DIR, "media/")
 # Default primary key field type
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = 'shop.User'

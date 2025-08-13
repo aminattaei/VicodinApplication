@@ -537,21 +537,8 @@
                                     <nav>
                                         <div class="ltn__main-menu">
                                             <ul>
-                                                <li class="menu-icon"><a href="#">خانه</a>
-                                                    <ul class="sub-menu menu-pages-img-show ltn__sub-menu-col-2---">
-                                                        <li>
-                                                            <a href="{% static 'index.html' %}">خانه طرح 1</a>
-                                                            <img src="{% static 'img/home-demos/home-1.jpg' %}" alt="#">
-                                                        </li>
-                                                        <li>
-                                                            <a href="{% static 'index-2.html' %}">خانه طرح 2</a>
-                                                            <img src="{% static 'img/home-demos/home-2.jpg' %}" alt="#">
-                                                        </li>
-                                                        <li>
-                                                            <a href="{% static 'index-3.html' %}">خانه طرح 3</a>
-                                                            <img src="{% static 'img/home-demos/home-3.jpg' %}" alt="#">
-                                                        </li>
-                                                    </ul>
+                                                <li><a href="{% url 'home_page' %}"> خانه</a></li>
+                                                    
                                                 </li>
                                                 <li class="menu-icon"><a href="#">درباره ما</a>
                                                     <ul>
