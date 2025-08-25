@@ -66,7 +66,7 @@ WSGI_APPLICATION = "VicodinConfig.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "vicodindb",
+        "NAME": "vicdb",
         'USER':'postgres',
         'PASSWORD':'123456',
         'HOST':'localhost',
@@ -112,10 +112,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # Media files (CSS, JavaScript, Images)
 
 MEDIA_URL = "/media/"
-MEDIA_URL = os.path.join(BASE_DIR, "media/")
+MEDIA_ROOT= os.path.join(BASE_DIR, "media/")
 
 # Default primary key field type
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = 'shop.User'
+

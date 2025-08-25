@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group, Permission
+from django.utils.translation import gettext_lazy as _
 
 # ===================== User =====================
 class User(AbstractUser):
@@ -25,6 +26,9 @@ class User(AbstractUser):
         verbose_name='user permissions'
     )
 
+    def __str__(self):
+        return f"{self.username} ({self.role})"
+
 # ===================== Address =====================
 class Address(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='addresses')
@@ -36,12 +40,18 @@ class Address(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"{self.street}, {self.city}, {self.country}"
+
 # ===================== Category =====================
 class Category(models.Model):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey('self', on_delete=models.SET_NULL, blank=True, null=True, related_name='subcategories')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
 
 # ===================== Product =====================
 class Product(models.Model):
@@ -50,10 +60,13 @@ class Product(models.Model):
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock_quantity = models.IntegerField(default=0)
-    image_url = models.TextField(blank=True, null=True)
-    video_url = models.TextField(blank=True, null=True)
+    image = models.ImageField(_("Picture Image"), upload_to='Products/images/',blank=True,null=True)
+    video = models.FileField(_("Product 's Video"), upload_to='Products/videos/', max_length=100,blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.category.name if self.category else 'No Category'}"
 
 # ===================== Inventory =====================
 class Inventory(models.Model):
@@ -66,6 +79,9 @@ class Inventory(models.Model):
     quantity = models.IntegerField()
     note = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.change_type} {self.quantity} of {self.product.name}"
 
 # ===================== Order =====================
 class Order(models.Model):
@@ -81,6 +97,9 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"Order #{self.id} - {self.user.username if self.user else 'Unknown'}"
+
 # ===================== OrderItem =====================
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
@@ -89,6 +108,9 @@ class OrderItem(models.Model):
     unit_price = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.quantity} x {self.product.name if self.product else 'Unknown'}"
 
 # ===================== Payment =====================
 class Payment(models.Model):
@@ -109,6 +131,9 @@ class Payment(models.Model):
     transaction_id = models.CharField(max_length=100, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f"Payment #{self.id} - {self.status}"
+
 # ===================== Review =====================
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
@@ -118,11 +143,17 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"Review by {self.user.username} for {self.product.name}"
+
 # ===================== Cart =====================
 class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='carts')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Cart of {self.user.username}"
 
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
@@ -131,6 +162,9 @@ class CartItem(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"{self.quantity} x {self.product.name if self.product else 'Unknown'}"
+
 # ===================== AuditLog =====================
 class AuditLog(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='audit_logs')
@@ -138,3 +172,6 @@ class AuditLog(models.Model):
     table_name = models.CharField(max_length=100)
     record_id = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.action} on {self.table_name} (ID: {self.record_id})"
