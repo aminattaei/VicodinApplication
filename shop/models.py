@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group, Permission
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse
 
 # ===================== User =====================
 class User(AbstractUser):
@@ -55,18 +56,49 @@ class Category(models.Model):
 
 # ===================== Product =====================
 class Product(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='products')
+    category = models.ForeignKey(
+        Category, on_delete=models.SET_NULL, null=True, related_name='products'
+    )
     name = models.CharField(max_length=150)
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock_quantity = models.IntegerField(default=0)
-    image = models.ImageField(_("Picture Image"), upload_to='Products/images/',blank=True,null=True)
-    video = models.FileField(_("Product 's Video"), upload_to='Products/videos/', max_length=100,blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    is_new = models.BooleanField(_("New Product?"), default=False, blank=True)
+    is_off = models.BooleanField(default=False, blank=True)
+    off_price = models.DecimalField(
+        _("off price"), max_digits=10, decimal_places=2, blank=True, null=True
+    )
 
     def __str__(self):
-        return f"{self.name} - {self.category.name if self.category else 'No Category'}"
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse("Product_detail", kwargs={"pk": self.pk})
+
+    @property
+    def final_price(self):
+        if self.is_off and self.off_price:
+            return self.off_price
+        return self.price
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="images"
+    )
+    image = models.ImageField(
+        upload_to="products/images/", blank=True, null=True
+    )
+    alt_text = models.CharField(max_length=150, blank=True, null=True)
+
+    def __str__(self):
+        return f"Image for {self.product.name}"
+
+    
+        
+    
 
 # ===================== Inventory =====================
 class Inventory(models.Model):

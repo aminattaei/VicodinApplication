@@ -3,7 +3,7 @@ from django import forms
 from .models import (
     User, Address, Category, Product, Inventory,
     Order, OrderItem, Payment, Review,
-    Cart, CartItem, AuditLog
+    Cart, CartItem, AuditLog,ProductImage
 )
 
 # ===================== User Admin =====================
@@ -39,11 +39,20 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 # ===================== Product Admin =====================
+
+ 
+class ProductImageInline(admin.TabularInline):  # ی
+    model = ProductImage
+    extra = 1  
+
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'price', 'stock_quantity')
-    list_filter = ('category',)
+    list_display = ('name', 'category', 'price', 'stock_quantity', 'is_new', 'is_off')
+    list_filter = ('category', 'is_new', 'is_off')
     search_fields = ('name', 'description')
+    inlines = [ProductImageInline]  
+
 
 # ===================== Inventory Admin =====================
 @admin.register(Inventory)

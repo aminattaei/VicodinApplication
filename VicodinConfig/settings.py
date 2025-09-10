@@ -112,7 +112,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # Media files (CSS, JavaScript, Images)
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT= os.path.join(BASE_DIR, "media/")
+MEDIA_ROOT= os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 
@@ -120,3 +120,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = 'shop.User'
 
+from rest_framework.permissions import IsAuthenticated
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    
+}

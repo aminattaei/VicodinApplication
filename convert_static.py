@@ -41,6 +41,6 @@ def convert_static_links(html_file_path, output_file_path):
 
 # استفاده
 convert_static_links(
-    "templates/partials/_footer.html", "templates/partials/_footer.html"
+    "templates/Shop/product-details1.html", "templates/Shop/product-details.html"
 
 )
